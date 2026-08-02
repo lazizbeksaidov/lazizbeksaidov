@@ -14,9 +14,9 @@ Use a specific headline that combines direction and evidence, such as:
 
 Avoid long skill inventories in the headline.
 
-### Research Direction
+### Builder Console Focus
 
-The `research` object powers both the terminal panel and the longer Research Direction section. Keep `primary`, `direction`, and `themes` compact; use `narrative` for nuance.
+The first four `focus` items power `BUILD.FOCUS` in the terminal panel. Give each item a concise `heroLabel`; use `description` for the fuller README table. The `research.narrative` field powers the longer Product Direction section.
 
 ### Featured Projects
 
@@ -26,7 +26,11 @@ The first four projects appear in the hero. Up to six appear in the README table
 
 ### Public Links
 
-The first two links appear in the hero. Up to four become badges below it. Only include links you are comfortable making permanently public.
+Up to four links become badges below the hero. Only include links you are comfortable making permanently public.
+
+### Build Activity
+
+The generator reads the public GitHub contribution calendar and creates dark/light SVGs in `assets/activity/`. The daily workflow refreshes both the contribution console and the Recent Activity list without relying on a third-party stats image service.
 
 ## Palettes
 
@@ -56,6 +60,6 @@ Edit `profile.config.json`, then regenerate with the same private source file:
 npm run generate -- --source /absolute/path/to/portrait.png
 ```
 
-The content and portrait determine a new eight-character asset version. Old generated hero assets are removed automatically, and README receives the new filenames.
+The content and portrait determine a new eight-character hero version. Public contribution data determines a separate activity version. Old generated assets are removed automatically, and README receives the new filenames.
 
 Recent Activity content is preserved when the full README is regenerated.

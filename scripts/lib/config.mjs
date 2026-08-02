@@ -51,6 +51,7 @@ export function validateConfig(config) {
   assert(Array.isArray(config.focus) && config.focus.length >= 1 && config.focus.length <= 6, "focus must contain 1 to 6 items.");
   config.focus.forEach((item, index) => {
     assertText(item?.name, `focus[${index}].name`, 28);
+    assertText(item?.heroLabel, `focus[${index}].heroLabel`, 38);
     assertText(item?.description, `focus[${index}].description`, 180);
   });
 

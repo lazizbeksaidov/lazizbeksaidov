@@ -2,7 +2,7 @@
   "name": "lazizbeksaidov-github-profile",
   "version": "1.0.0",
   "private": true,
-  "description": "Lazizbek Saidov's responsive GitHub profile console with a generated ASCII portrait.",
+  "description": "Lazizbek Saidov's responsive GitHub builder console with an ASCII portrait and self-hosted contribution activity.",
   "type": "module",
   "engines": {
     "node": ">=20"

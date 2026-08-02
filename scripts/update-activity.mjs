@@ -3,7 +3,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { loadConfig, repositoryRoot } from "./lib/config.mjs";
-import { ACTIVITY_END, ACTIVITY_START } from "./lib/readme.mjs";
+import { fetchContributionData, generateContributionAssets } from "./lib/contributions.mjs";
+import { ACTIVITY_END, ACTIVITY_START, generateProfileReadme } from "./lib/readme.mjs";
 
 const dryRun = process.argv.includes("--dry-run");
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
@@ -58,22 +59,32 @@ try {
 
   const headers = { Accept: "application/vnd.github+json", "User-Agent": `${config.profile.username}-profile-readme` };
   if (token) headers.Authorization = `Bearer ${token}`;
-  const response = await fetch(`https://api.github.com/users/${config.profile.username}/events/public?per_page=50`, { headers });
+  const [response, contributionData] = await Promise.all([
+    fetch(`https://api.github.com/users/${config.profile.username}/events/public?per_page=50`, { headers }),
+    fetchContributionData(config.profile.username)
+  ]);
   if (!response.ok) throw new Error(`GitHub API returned ${response.status} ${response.statusText}.`);
 
   const events = await response.json();
   const lines = events.map(eventToLine).filter(Boolean).filter((line, index, all) => all.indexOf(line) === index).slice(0, config.activity.limit);
   const content = lines.length ? lines.join("\n") : "_No recent public activity was found._";
-  const readmePath = resolve(repositoryRoot, "README.md");
-  const readme = await readFile(readmePath, "utf8");
-  const nextReadme = replaceActivity(readme, content);
-
   if (dryRun) {
     console.log(content);
-    console.log("\nDry run complete. README.md was not modified.");
+    console.log(`\nContribution snapshot: ${contributionData.stats.total} total, ${contributionData.stats.currentStreak}-day current streak.`);
+    console.log("Dry run complete. README.md and generated assets were not modified.");
   } else {
+    const readmePath = resolve(repositoryRoot, "README.md");
+    const manifest = JSON.parse(await readFile(resolve(repositoryRoot, "assets/hero/manifest.json"), "utf8"));
+    const contributionManifest = await generateContributionAssets({
+      config,
+      data: contributionData,
+      outputDirectory: resolve(repositoryRoot, "assets/activity")
+    });
+    await generateProfileReadme({ config, manifest, contributionManifest, readmePath });
+    const readme = await readFile(readmePath, "utf8");
+    const nextReadme = replaceActivity(readme, content);
     await writeFile(readmePath, nextReadme);
-    console.log("README.md activity block updated.");
+    console.log(`README.md activity and contribution asset ${contributionManifest.version} updated.`);
   }
 } catch (error) {
   console.error(error.message);

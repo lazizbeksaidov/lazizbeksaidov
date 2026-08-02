@@ -6,7 +6,7 @@
     "headline": "AI Product Developer & Full-Stack Builder",
     "affiliation": "Independent Product Builder",
     "location": "Remote",
-    "status": "Building practical AI products",
+    "status": "Designing / Building / Shipping",
     "about": [
       "I build practical AI products and full-stack tools for real workflows, with a focus on clear interfaces, reliable systems, and measurable user value.",
       "My public work spans legal technology, personal finance, and operational software—from product design and frontend engineering to APIs, data, and deployment."
@@ -21,18 +21,22 @@
   "focus": [
     {
       "name": "Applied AI",
+      "heroLabel": "Practical systems and workflows",
       "description": "Turning model capabilities into useful, testable workflows with clear product value."
     },
     {
       "name": "LegalTech",
+      "heroLabel": "Accessible legal experiences",
       "description": "Making legal information and assistance easier to access and understand."
     },
     {
       "name": "Product Engineering",
+      "heroLabel": "Idea to working release",
       "description": "Taking ideas from focused prototypes to maintainable, deployed products."
     },
     {
       "name": "Workflow Automation",
+      "heroLabel": "Less repetition, better operations",
       "description": "Reducing repetitive operational work through thoughtful software systems."
     }
   ],

@@ -6,7 +6,7 @@ The generator is designed so the original portrait does not need to enter Git hi
 
 1. Store the transparent portrait outside the repository.
 2. Pass its absolute path to `npm run setup` or `npm run generate`.
-3. Commit only `profile.config.json`, `README.md`, and generated files in `assets/hero/`.
+3. Commit only `profile.config.json`, `README.md`, and generated files in `assets/hero/` and `assets/activity/`.
 
 ## Before Every Commit
 
@@ -32,3 +32,5 @@ These patterns reduce accidental commits but do not replace reviewing `git statu
 ## Public Information
 
 Everything in `profile.config.json` is intended to be committed. Do not put private email addresses, private repositories, credentials, unpublished research, or confidential employer information in that file.
+
+The activity generator uses GitHub's public contribution calendar and public events API. It does not expose private repository names or commit details.
