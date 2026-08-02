@@ -14,7 +14,7 @@ Use a cleaner cutout with clear lighting. Hair, face, and clothing should have v
 
 ## Text is cut off in the terminal panel
 
-Shorten `headline`, `research.direction`, `research.themes`, or project `heroLabel` values. `npm run check` validates hard limits, but shorter copy usually looks better than copy at the maximum.
+Shorten `headline`, focus `heroLabel`, or project `heroLabel` values. `npm run check` validates hard limits, but shorter copy usually looks better than copy at the maximum.
 
 ## GitHub still displays an older image
 
@@ -32,6 +32,8 @@ Confirm all of the following:
 ## Recent Activity does not update
 
 Confirm `activity.enabled` is `true`, enable Actions for the repository, and run the workflow manually once. The scheduled job intentionally skips repositories whose name does not match the owner.
+
+If the contribution console is also missing, confirm that `https://github.com/users/YOUR_USERNAME/contributions` is publicly accessible and rerun `npm run activity`.
 
 ## `npm install` fails
 

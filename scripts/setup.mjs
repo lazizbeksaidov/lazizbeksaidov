@@ -6,6 +6,7 @@ import { resolve } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 import { loadConfig, repositoryRoot, validateConfig } from "./lib/config.mjs";
+import { generateContributionAssets } from "./lib/contributions.mjs";
 import { generateHeroAssets } from "./lib/hero.mjs";
 import { generateProfileReadme } from "./lib/readme.mjs";
 
@@ -65,8 +66,13 @@ try {
   const focusNames = asList(await ask("Focus areas, comma separated (1-4)", defaults.focus.map((item) => item.name).join(", "))).slice(0, 4);
   const focus = [];
   for (const [index, focusName] of focusNames.entries()) {
-    const fallback = defaults.focus[index]?.description || `What I am exploring in ${focusName}.`;
-    focus.push({ name: focusName, description: await ask(`Description for ${focusName}`, fallback) });
+    const fallbackDescription = defaults.focus[index]?.description || `What I am exploring in ${focusName}.`;
+    const fallbackHeroLabel = defaults.focus[index]?.heroLabel || `Practical work in ${focusName}`;
+    focus.push({
+      name: focusName,
+      heroLabel: await ask(`Short console label for ${focusName}`, fallbackHeroLabel),
+      description: await ask(`Description for ${focusName}`, fallbackDescription)
+    });
   }
 
   console.log("\nFeatured projects (add up to four)\n");
@@ -116,12 +122,15 @@ try {
 
   await writeFile(resolve(repositoryRoot, "profile.config.json"), `${JSON.stringify(config, null, 2)}\n`);
   const manifest = await generateHeroAssets({ config, sourcePath, outputDirectory: resolve(repositoryRoot, "assets/hero") });
-  await generateProfileReadme({ config, manifest, readmePath: resolve(repositoryRoot, "README.md") });
+  const contributionManifest = config.activity.enabled
+    ? await generateContributionAssets({ config, outputDirectory: resolve(repositoryRoot, "assets/activity") })
+    : undefined;
+  await generateProfileReadme({ config, manifest, contributionManifest, readmePath: resolve(repositoryRoot, "README.md") });
 
   console.log("\nProfile generated successfully.\n");
   console.log("Next steps:");
   console.log("  npm run check");
-  console.log("  git add README.md profile.config.json assets/hero");
+  console.log("  git add README.md profile.config.json assets/hero assets/activity");
   console.log('  git commit -m "feat: create my GitHub profile"');
   console.log("  git push");
 } catch (error) {

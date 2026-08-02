@@ -2,6 +2,7 @@
 
 import { resolve } from "node:path";
 import { loadConfig, readFlag, repositoryRoot } from "./lib/config.mjs";
+import { generateContributionAssets } from "./lib/contributions.mjs";
 import { generateHeroAssets } from "./lib/hero.mjs";
 import { generateProfileReadme } from "./lib/readme.mjs";
 
@@ -18,8 +19,12 @@ try {
     sourcePath: resolve(source),
     outputDirectory: resolve(repositoryRoot, "assets/hero")
   });
-  await generateProfileReadme({ config, manifest, readmePath: resolve(repositoryRoot, "README.md") });
-  console.log(`Profile generated successfully (asset version ${manifest.version}).`);
+  const contributionManifest = config.activity.enabled
+    ? await generateContributionAssets({ config, outputDirectory: resolve(repositoryRoot, "assets/activity") })
+    : undefined;
+  await generateProfileReadme({ config, manifest, contributionManifest, readmePath: resolve(repositoryRoot, "README.md") });
+  const activityVersion = contributionManifest ? `, activity ${contributionManifest.version}` : "";
+  console.log(`Profile generated successfully (hero ${manifest.version}${activityVersion}).`);
 } catch (error) {
   console.error(error.message);
   process.exitCode = 1;
