@@ -1,0 +1,111 @@
+{
+  "$schema": "./profile.schema.json",
+  "profile": {
+    "name": "Lazizbek Saidov",
+    "username": "lazizbeksaidov",
+    "headline": "AI Product Developer & Full-Stack Builder",
+    "affiliation": "Independent Product Builder",
+    "location": "Remote",
+    "status": "Building practical AI products",
+    "about": [
+      "I build practical AI products and full-stack tools for real workflows, with a focus on clear interfaces, reliable systems, and measurable user value.",
+      "My public work spans legal technology, personal finance, and operational software—from product design and frontend engineering to APIs, data, and deployment."
+    ]
+  },
+  "research": {
+    "primary": "Applied AI Systems",
+    "direction": "Reliable AI for practical workflows",
+    "themes": "LegalTech / automation / product engineering",
+    "narrative": "I am exploring how AI can support high-context workflows without hiding uncertainty. My direction is to combine grounded domain logic, useful interfaces, and bounded automation so people can understand the system, verify its output, and act with confidence."
+  },
+  "focus": [
+    {
+      "name": "Applied AI",
+      "description": "Turning model capabilities into useful, testable workflows with clear product value."
+    },
+    {
+      "name": "LegalTech",
+      "description": "Making legal information and assistance easier to access and understand."
+    },
+    {
+      "name": "Product Engineering",
+      "description": "Taking ideas from focused prototypes to maintainable, deployed products."
+    },
+    {
+      "name": "Workflow Automation",
+      "description": "Reducing repetitive operational work through thoughtful software systems."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Yurist AI",
+      "url": "https://github.com/lazizbeksaidov/yurist-ai",
+      "homepage": "",
+      "focus": "AI-assisted legal information",
+      "summary": "A Next.js legal assistant for Uzbekistan that structures questions, relevant legal context, and practical next steps in a conversational experience.",
+      "heroLabel": "Legal AI assistant"
+    },
+    {
+      "name": "Moliya Hisobot",
+      "url": "https://github.com/lazizbeksaidov/moliya-hisobot",
+      "homepage": "",
+      "focus": "Personal finance PWA",
+      "summary": "A personal finance application for tracking loans, income, expenses, budgets, and recurring transactions with clear analysis and optional Supabase sync.",
+      "heroLabel": "Finance intelligence"
+    },
+    {
+      "name": "Intizom",
+      "url": "https://github.com/lazizbeksaidov/davomat-tizimi",
+      "homepage": "https://xodimlar-7c13c.web.app/",
+      "focus": "Attendance and operations",
+      "summary": "A web-based employee attendance and execution-discipline monitoring system designed around practical organizational workflows.",
+      "heroLabel": "Operations monitor"
+    },
+    {
+      "name": "Navoiy Yuridik",
+      "url": "https://github.com/lazizbeksaidov/navoiy-yuridik-site",
+      "homepage": "",
+      "focus": "Public legal information",
+      "summary": "A responsive legal information website that organizes regional services and resources into an accessible public experience.",
+      "heroLabel": "Legal information"
+    }
+  ],
+  "techStack": [
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "React",
+    "Next.js",
+    "FastAPI",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "Supabase",
+    "Firebase",
+    "Docker",
+    "Git"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "value": "lazizbeksaidov",
+      "url": "https://github.com/lazizbeksaidov",
+      "logo": "github",
+      "color": "0B1220"
+    },
+    {
+      "label": "Projects",
+      "value": "Explore repositories",
+      "url": "https://github.com/lazizbeksaidov?tab=repositories",
+      "logo": "github",
+      "color": "0891B2"
+    }
+  ],
+  "activity": {
+    "enabled": true,
+    "limit": 6
+  },
+  "appearance": {
+    "palette": "signal"
+  },
+  "footer": "Building thoughtful AI products and useful software for real-world workflows."
+}
