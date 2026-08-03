@@ -9,7 +9,7 @@
   </picture>
 </p>
 
-<p align="center">[Telegram](https://t.me/Lazizbek_Saidov) · [Instagram](https://instagram.com/_lazizbek_saidov) · [YouTube](https://www.youtube.com/@Lazizbek_Saidov) · [Website](https://lavha.vercel.app)</p>
+<p align="center"><a href="https://t.me/Lazizbek_Saidov">Telegram</a> · <a href="https://instagram.com/_lazizbek_saidov">Instagram</a> · <a href="https://www.youtube.com/@Lazizbek_Saidov">YouTube</a> · <a href="https://lavha.vercel.app">Website</a></p>
 
 ## Build Activity
 

@@ -14,11 +14,25 @@ function escapeCell(value) {
   return String(value).replaceAll("|", "\\|").replaceAll("\n", " ");
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
 // Text links, not badge images. The shields.io badges that used to live here
 // were the only third-party network requests on the page, and they sat
 // directly above this README's own claim of using no third-party service.
+//
+// Anchors rather than Markdown link syntax: this sits inside a
+// <p align="center"> on the same line, which GFM treats as a raw HTML block
+// and passes through unparsed, so [label](url) would render literally.
 function renderLinks(links) {
-  return links.map((link) => `[${escapeCell(link.label)}](${link.url})`).join(" · ");
+  return links
+    .map((link) => `<a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a>`)
+    .join(" · ");
 }
 
 function renderFocus(focus) {
