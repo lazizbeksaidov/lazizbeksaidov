@@ -5,7 +5,7 @@
     "username": "lazizbeksaidov",
     "headline": "AI Product Developer & Full-Stack Builder",
     "affiliation": "Independent Product Builder",
-    "location": "Remote",
+    "location": "Navoiy, Uzbekistan",
     "status": "Designing / Building / Shipping",
     "about": [
       "I build practical AI products and full-stack tools for real workflows, with a focus on clear interfaces, reliable systems, and measurable user value.",
@@ -90,18 +90,24 @@
   ],
   "links": [
     {
-      "label": "GitHub",
-      "value": "lazizbeksaidov",
-      "url": "https://github.com/lazizbeksaidov",
-      "logo": "github",
-      "color": "0B1220"
+      "label": "Telegram",
+      "value": "@Lazizbek_Saidov",
+      "url": "https://t.me/Lazizbek_Saidov"
     },
     {
-      "label": "Projects",
-      "value": "Explore repositories",
-      "url": "https://github.com/lazizbeksaidov?tab=repositories",
-      "logo": "github",
-      "color": "0891B2"
+      "label": "Instagram",
+      "value": "@_lazizbek_saidov",
+      "url": "https://instagram.com/_lazizbek_saidov"
+    },
+    {
+      "label": "YouTube",
+      "value": "@Lazizbek_Saidov",
+      "url": "https://www.youtube.com/@Lazizbek_Saidov"
+    },
+    {
+      "label": "Website",
+      "value": "lavha.vercel.app",
+      "url": "https://lavha.vercel.app"
     }
   ],
   "activity": {

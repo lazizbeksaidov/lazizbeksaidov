@@ -1,15 +1,15 @@
 {
-  "generator": "contribution-console-v3",
-  "version": "836fd1fe",
+  "generator": "contribution-console-v4",
+  "version": "670b91c4",
   "username": "lazizbeksaidov",
   "range": {
     "from": "2025-08-03",
-    "to": "2026-08-02"
+    "to": "2026-08-03"
   },
   "stats": {
-    "total": 157,
-    "activeDays": 26,
-    "currentStreak": 1,
+    "total": 162,
+    "activeDays": 27,
+    "currentStreak": 2,
     "longestStreak": 4,
     "bestDay": {
       "date": "2026-04-02",
@@ -17,8 +17,26 @@
     }
   },
   "assets": {
-    "dark": "contribution-console-836fd1fe-dark.svg",
-    "light": "contribution-console-836fd1fe-light.svg",
-    "data": "contributions-836fd1fe.json"
-  }
+    "dark": "contribution-console-670b91c4-dark.svg",
+    "light": "contribution-console-670b91c4-light.svg",
+    "mobileDark": "contribution-console-670b91c4-mobile-dark.svg",
+    "mobileLight": "contribution-console-670b91c4-mobile-light.svg",
+    "data": "contributions-670b91c4.json"
+  },
+  "regions": [
+    {
+      "label": "heatmap",
+      "x": 168,
+      "y": 94,
+      "width": 844,
+      "height": 108
+    },
+    {
+      "label": "stats",
+      "x": 28,
+      "y": 228,
+      "width": 1124,
+      "height": 48
+    }
+  ]
 }

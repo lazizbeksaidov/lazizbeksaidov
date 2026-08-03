@@ -5,7 +5,9 @@ import { access, readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { promisify } from "node:util";
 import { loadConfig, repositoryRoot } from "./lib/config.mjs";
+import { assertInk } from "./lib/raster-check.mjs";
 import { ACTIVITY_END, ACTIVITY_START } from "./lib/readme.mjs";
+import { assertThemes } from "./lib/theme.mjs";
 
 const execFileAsync = promisify(execFile);
 
@@ -40,30 +42,40 @@ try {
   const manifest = await readManifest("hero");
   const contributionManifest = await readManifest("activity");
 
+  // A document can be perfectly well-formed and still render as an empty box.
+  // Structural checks alone let exactly that ship, so every asset that
+  // declares ink regions is rasterised and measured -- as drawn, and again
+  // with all animation frozen at t=0.
+  async function checkAssets(directory, entries, regions) {
+    let checked = 0;
+    for (const assetName of entries) {
+      const assetPath = resolve(repositoryRoot, "assets", directory, assetName);
+      await access(assetPath);
+      const svg = await readFile(assetPath, "utf8");
+      assert(svg.startsWith("<svg") && svg.endsWith("</svg>"), `${assetName} is not a complete SVG document.`);
+      assert(!svg.includes("${"), `${assetName} contains an unresolved template expression.`);
+      assert(readme.includes(assetName), `README.md does not reference ${assetName}.`);
+      if (regions?.length && !assetName.includes("mobile")) {
+        await assertInk(svg, regions, assetName);
+        checked += 1;
+      }
+    }
+    return checked;
+  }
+
+  const themeCount = assertThemes();
+  let rasterChecked = 0;
+
   if (manifest) {
     const assetNames = Object.values(manifest.assets || {});
     assert(assetNames.length === 4, "Hero manifest must contain four responsive theme assets.");
-    for (const assetName of assetNames) {
-      const assetPath = resolve(repositoryRoot, "assets/hero", assetName);
-      await access(assetPath);
-      const svg = await readFile(assetPath, "utf8");
-      assert(svg.startsWith("<svg") && svg.endsWith("</svg>"), `${assetName} is not a complete SVG document.`);
-      assert(!svg.includes("${"), `${assetName} contains an unresolved template expression.`);
-      assert(readme.includes(assetName), `README.md does not reference ${assetName}.`);
-    }
+    rasterChecked += await checkAssets("hero", assetNames, manifest.regions);
   }
 
   if (contributionManifest) {
-    const { dark, light, data } = contributionManifest.assets || {};
-    assert(dark && light && data, "Activity manifest must contain dark, light, and data assets.");
-    for (const assetName of [dark, light]) {
-      const assetPath = resolve(repositoryRoot, "assets/activity", assetName);
-      await access(assetPath);
-      const svg = await readFile(assetPath, "utf8");
-      assert(svg.startsWith("<svg") && svg.endsWith("</svg>"), `${assetName} is not a complete SVG document.`);
-      assert(!svg.includes("${"), `${assetName} contains an unresolved template expression.`);
-      assert(readme.includes(assetName), `README.md does not reference ${assetName}.`);
-    }
+    const { data, ...svgAssets } = contributionManifest.assets || {};
+    assert(data && Object.keys(svgAssets).length >= 2, "Activity manifest must contain SVG assets and a data asset.");
+    rasterChecked += await checkAssets("activity", Object.values(svgAssets), contributionManifest.regions);
     const activityData = JSON.parse(await readFile(resolve(repositoryRoot, "assets/activity", data), "utf8"));
     assert(activityData.username === config.profile.username, "Activity data belongs to a different GitHub username.");
     assert(Array.isArray(activityData.days) && activityData.days.length >= 28, "Activity data must contain at least 28 calendar days.");
@@ -75,8 +87,10 @@ try {
   }
 
   console.log(`Validated profile configuration and ${scriptCount} JavaScript modules.`);
+  console.log(`Validated ${themeCount} palettes for contrast and scale monotonicity.`);
   console.log(manifest ? `Validated hero asset version ${manifest.version}.` : "Template mode: no generated profile assets yet.");
   if (contributionManifest) console.log(`Validated activity asset version ${contributionManifest.version}.`);
+  console.log(`Rasterised ${rasterChecked} asset${rasterChecked === 1 ? "" : "s"} to confirm they draw ink, including with animation frozen.`);
 } catch (error) {
   console.error(`Validation failed: ${error.message}`);
   process.exitCode = 1;

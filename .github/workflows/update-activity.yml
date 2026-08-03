@@ -30,6 +30,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Validate before committing, not after. validate.yml only fires on the
+      # resulting push, so a blank asset used to reach the profile first and
+      # fail second.
+      - name: Validate regenerated assets
+        run: npm run check
+
       - name: Commit changes
         run: |
           if git diff --quiet README.md assets/activity; then

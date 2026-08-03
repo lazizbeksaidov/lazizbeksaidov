@@ -68,13 +68,14 @@ export function validateConfig(config) {
   assert(Array.isArray(config.techStack) && config.techStack.length >= 1 && config.techStack.length <= 18, "techStack must contain 1 to 18 items.");
   config.techStack.forEach((item, index) => assertText(item, `techStack[${index}]`, 30));
 
-  assert(Array.isArray(config.links) && config.links.length >= 1 && config.links.length <= 4, "links must contain 1 to 4 items.");
+  // Links are rendered as text, in the hero console and as plain Markdown.
+  // They no longer carry a logo slug or a badge colour because nothing here
+  // requests a third-party badge image any more.
+  assert(Array.isArray(config.links) && config.links.length >= 1 && config.links.length <= 5, "links must contain 1 to 5 items.");
   config.links.forEach((link, index) => {
     assertText(link?.label, `links[${index}].label`, 14);
     assertText(link?.value, `links[${index}].value`, 28);
     assertUrl(link?.url, `links[${index}].url`);
-    assert(typeof link?.logo === "string" && link.logo.length <= 30, `links[${index}].logo must be 30 characters or fewer.`);
-    assert(/^[A-Fa-f0-9]{6}$/.test(link?.color), `links[${index}].color must be a six-character hex value without #.`);
   });
 
   assert(config.activity && typeof config.activity.enabled === "boolean", "activity.enabled must be true or false.");

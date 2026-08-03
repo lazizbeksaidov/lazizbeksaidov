@@ -20,8 +20,14 @@ function eventToLine(event) {
   const repoLink = `https://github.com/${repo}`;
 
   if (event.type === "PushEvent") {
-    const commits = event.payload?.commits?.length || 1;
-    return `- ${date}: pushed ${commits} ${commits === 1 ? "commit" : "commits"} to [${repo}](${repoLink}).`;
+    // The public user-events feed omits the commit list entirely: a PushEvent
+    // payload carries only repository_id, push_id, ref, head and before. The
+    // old `?.commits?.length || 1` therefore printed a hardcoded "1 commit" on
+    // every line -- a fabricated number, directly above this profile's claim of
+    // reporting real activity. Only state a count when one actually arrives.
+    const count = event.payload?.size ?? event.payload?.distinct_size ?? event.payload?.commits?.length;
+    const what = Number.isInteger(count) && count > 0 ? `${count} ${count === 1 ? "commit" : "commits"}` : "changes";
+    return `- ${date}: pushed ${what} to [${repo}](${repoLink}).`;
   }
   if (event.type === "CreateEvent") {
     return `- ${date}: created a ${event.payload?.ref_type || "resource"} in [${repo}](${repoLink}).`;

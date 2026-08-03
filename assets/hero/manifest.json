@@ -1,10 +1,166 @@
 {
-  "generator": "builder-console-v3",
-  "version": "46a9414b",
+  "generator": "builder-console-v4",
+  "version": "6f24c294",
   "assets": {
-    "desktopDark": "agent-console-46a9414b-dark.svg",
-    "desktopLight": "agent-console-46a9414b-light.svg",
-    "mobileDark": "agent-console-46a9414b-mobile-dark.svg",
-    "mobileLight": "agent-console-46a9414b-mobile-light.svg"
-  }
+    "desktopDark": "agent-console-6f24c294-dark.svg",
+    "desktopLight": "agent-console-6f24c294-light.svg",
+    "mobileDark": "agent-console-6f24c294-mobile-dark.svg",
+    "mobileLight": "agent-console-6f24c294-mobile-light.svg"
+  },
+  "regions": [
+    {
+      "label": "portrait",
+      "x": 22,
+      "y": 76,
+      "width": 404,
+      "height": 386
+    },
+    {
+      "label": "row:lazizbek@build",
+      "x": 458,
+      "y": 83,
+      "width": 114,
+      "height": 19
+    },
+    {
+      "label": "row:Name",
+      "x": 458,
+      "y": 103.5,
+      "width": 223,
+      "height": 19
+    },
+    {
+      "label": "row:Role",
+      "x": 458,
+      "y": 124,
+      "width": 426,
+      "height": 19
+    },
+    {
+      "label": "row:Based",
+      "x": 458,
+      "y": 144.5,
+      "width": 246,
+      "height": 19
+    },
+    {
+      "label": "row:Mode",
+      "x": 458,
+      "y": 165,
+      "width": 348,
+      "height": 19
+    },
+    {
+      "label": "row:BUILD.FOCUS",
+      "x": 458,
+      "y": 206,
+      "width": 90,
+      "height": 19
+    },
+    {
+      "label": "row:Applied AI",
+      "x": 458,
+      "y": 226.5,
+      "width": 457,
+      "height": 19
+    },
+    {
+      "label": "row:LegalTech",
+      "x": 458,
+      "y": 247,
+      "width": 433,
+      "height": 19
+    },
+    {
+      "label": "row:Product Engineering",
+      "x": 458,
+      "y": 267.5,
+      "width": 394,
+      "height": 19
+    },
+    {
+      "label": "row:Workflow Automation",
+      "x": 458,
+      "y": 288,
+      "width": 480,
+      "height": 19
+    },
+    {
+      "label": "row:SELECTED.WORK",
+      "x": 458,
+      "y": 329,
+      "width": 106,
+      "height": 19
+    },
+    {
+      "label": "row:Yurist AI",
+      "x": 458,
+      "y": 349.5,
+      "width": 316,
+      "height": 19
+    },
+    {
+      "label": "row:Moliya Hisobot",
+      "x": 458,
+      "y": 370,
+      "width": 332,
+      "height": 19
+    },
+    {
+      "label": "row:Intizom",
+      "x": 458,
+      "y": 390.5,
+      "width": 316,
+      "height": 19
+    },
+    {
+      "label": "row:Navoiy Yuridik",
+      "x": 458,
+      "y": 411,
+      "width": 309,
+      "height": 19
+    },
+    {
+      "label": "row:CONNECT",
+      "x": 458,
+      "y": 452,
+      "width": 59,
+      "height": 19
+    },
+    {
+      "label": "row:Telegram",
+      "x": 458,
+      "y": 472.5,
+      "width": 262,
+      "height": 19
+    },
+    {
+      "label": "row:Instagram",
+      "x": 458,
+      "y": 493,
+      "width": 270,
+      "height": 19
+    },
+    {
+      "label": "row:YouTube",
+      "x": 458,
+      "y": 513.5,
+      "width": 262,
+      "height": 19
+    },
+    {
+      "label": "row:Website",
+      "x": 458,
+      "y": 534,
+      "width": 262,
+      "height": 19
+    },
+    {
+      "label": "row:FROM IDEA TO WORKING PRODUCT",
+      "x": 458,
+      "y": 575,
+      "width": 223,
+      "height": 19
+    }
+  ]
 }
