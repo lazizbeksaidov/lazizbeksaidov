@@ -270,10 +270,28 @@ ${renderStatCards(data, colors, size, plan.cardsTop)}
 
 function inkRegions(data, size) {
   const plan = planActivity(data, size);
-  return [
-    { label: "heatmap", x: plan.startX, y: size.gridTop, width: plan.gridWidth, height: plan.gridHeight },
-    { label: "stats", x: 28, y: plan.cardsTop, width: size.width - 56, height: size.cards === "stack" ? 32 : 48 }
-  ];
+
+  // Heatmap ink scales with the data: the median-based counter treats the
+  // dominant level-0 cells as background, so only active-day cells reliably
+  // register. A fixed 1.5% floor therefore failed sparse-but-real years -- a
+  // 5-active-day calendar rasterises at ~1.1% while being drawn perfectly.
+  // Derive the floor from the calendar instead: expected ink is roughly
+  // activeFraction x cell coverage, and gating at 40% of that keeps 2.5x
+  // margin for palette and antialiasing variance while a genuinely blank
+  // raster (0.00%) still fails. Dense years clamp back to the original 1.5%.
+  const activeFraction = data.days.filter((day) => day.level > 0).length / data.days.length;
+  const cellCoverage = (size.cell / (size.cell + size.gap)) ** 2;
+  const heatmapFloor = Math.min(0.015, Math.max(0.002, activeFraction * cellCoverage * 0.4));
+
+  const regions = [];
+  // A year with zero active days draws no active cells at all, making a
+  // correct render numerically indistinguishable from the blank-render bug.
+  // Gate on the stats band alone in that case -- its text always draws.
+  if (activeFraction > 0) {
+    regions.push({ label: "heatmap", x: plan.startX, y: size.gridTop, width: plan.gridWidth, height: plan.gridHeight, minInk: heatmapFloor });
+  }
+  regions.push({ label: "stats", x: 28, y: plan.cardsTop, width: size.width - 56, height: size.cards === "stack" ? 32 : 48 });
+  return regions;
 }
 
 async function cleanOldAssets(outputDirectory, currentFiles) {

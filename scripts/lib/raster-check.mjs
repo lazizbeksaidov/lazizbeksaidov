@@ -25,6 +25,11 @@ const INK_DELTA = 18;
 // Measured floor: real content bands render at 3.6-11.8% and genuinely blank
 // bands at 0.00%, so 1.5% sits with roughly 2.4x margin under the lowest
 // legitimate band and far above any antialiasing noise.
+//
+// That margin only holds for regions whose ink is roughly constant, like text
+// bands. Regions whose ink scales with the data -- the contribution heatmap,
+// where a sparse-but-real year draws under 1.5% -- declare their own
+// data-derived floor via region.minInk instead of inheriting this default.
 const MINIMUM_INK = 0.015;
 
 export async function inkCoverage(svg, region) {
@@ -64,15 +69,16 @@ export async function assertInk(svg, regions, assetName) {
   const problems = [];
 
   for (const region of regions) {
+    const floor = region.minInk ?? MINIMUM_INK;
     const live = await inkCoverage(svg, region);
     const frozen = await inkCoverage(freezeAtZero(svg), region);
     const worst = Math.min(live, frozen);
 
-    if (worst < MINIMUM_INK) {
+    if (worst < floor) {
       const which = frozen < live ? "with animation frozen at t=0" : "as rendered";
       problems.push(
         `${assetName}: region "${region.label}" is ${(worst * 100).toFixed(2)}% ink ${which}, ` +
-        `below the ${(MINIMUM_INK * 100).toFixed(1)}% floor.`
+        `below the ${(floor * 100).toFixed(2)}% floor.`
       );
     }
   }
