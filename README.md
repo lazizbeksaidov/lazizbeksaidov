@@ -60,12 +60,12 @@ I am exploring how AI can support high-context workflows without hiding uncertai
 ## Recent Activity
 
 <!-- AUTO:ACTIVITY:START -->
+- Aug 9, 2026: pushed changes to [lazizbeksaidov/lazizbeksaidov](https://github.com/lazizbeksaidov/lazizbeksaidov).
 - Aug 8, 2026: pushed changes to [lazizbeksaidov/adlix](https://github.com/lazizbeksaidov/adlix).
 - Aug 8, 2026: created a branch in [lazizbeksaidov/adlix](https://github.com/lazizbeksaidov/adlix).
 - Aug 3, 2026: pushed changes to [lazizbeksaidov/moliya-hisobot](https://github.com/lazizbeksaidov/moliya-hisobot).
-- Aug 3, 2026: pushed changes to [lazizbeksaidov/navoiy-yuridik-site](https://github.com/lazizbeksaidov/navoiy-yuridik-site).
-- Aug 3, 2026: pushed changes to [lazizbeksaidov/davomat-tizimi](https://github.com/lazizbeksaidov/davomat-tizimi).
 - Aug 3, 2026: pushed changes to [lazizbeksaidov/lazizbeksaidov](https://github.com/lazizbeksaidov/lazizbeksaidov).
+- Aug 3, 2026: created a branch in [lazizbeksaidov/lazizbeksaidov](https://github.com/lazizbeksaidov/lazizbeksaidov).
 <!-- AUTO:ACTIVITY:END -->
 
 ---
