@@ -15,11 +15,11 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-14295920-mobile-dark.svg">
-    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-14295920-mobile-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-14295920-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-14295920-light.svg">
-    <img src="./assets/activity/contribution-console-14295920-dark.svg" alt="Lazizbek Saidov public GitHub activity: 34 contributions across 7 active days" width="100%">
+    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-620f152d-mobile-dark.svg">
+    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-620f152d-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-620f152d-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-620f152d-light.svg">
+    <img src="./assets/activity/contribution-console-620f152d-dark.svg" alt="Lazizbek Saidov public GitHub activity: 35 contributions across 8 active days" width="100%">
   </picture>
 </p>
 
