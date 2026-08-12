@@ -15,11 +15,11 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-4f44728c-mobile-dark.svg">
-    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-4f44728c-mobile-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-4f44728c-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-4f44728c-light.svg">
-    <img src="./assets/activity/contribution-console-4f44728c-dark.svg" alt="Lazizbek Saidov public GitHub activity: 42 contributions across 9 active days" width="100%">
+    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-0def41c6-mobile-dark.svg">
+    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-0def41c6-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-0def41c6-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-0def41c6-light.svg">
+    <img src="./assets/activity/contribution-console-0def41c6-dark.svg" alt="Lazizbek Saidov public GitHub activity: 42 contributions across 9 active days" width="100%">
   </picture>
 </p>
 
