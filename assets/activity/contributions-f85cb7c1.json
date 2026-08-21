@@ -2,7 +2,7 @@
   "username": "lazizbeksaidov",
   "range": {
     "from": "2025-08-17",
-    "to": "2026-08-20"
+    "to": "2026-08-21"
   },
   "stats": {
     "total": 42,
@@ -1857,6 +1857,11 @@
     },
     {
       "date": "2026-08-20",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-08-21",
       "count": 0,
       "level": 0
     }
