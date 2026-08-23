@@ -1,10 +1,10 @@
 {
   "generator": "contribution-console-v4",
-  "version": "49cecc94",
+  "version": "e2129275",
   "username": "lazizbeksaidov",
   "range": {
-    "from": "2025-08-17",
-    "to": "2026-08-22"
+    "from": "2025-08-24",
+    "to": "2026-08-23"
   },
   "stats": {
     "total": 42,
@@ -17,11 +17,11 @@
     }
   },
   "assets": {
-    "dark": "contribution-console-49cecc94-dark.svg",
-    "light": "contribution-console-49cecc94-light.svg",
-    "mobileDark": "contribution-console-49cecc94-mobile-dark.svg",
-    "mobileLight": "contribution-console-49cecc94-mobile-light.svg",
-    "data": "contributions-49cecc94.json"
+    "dark": "contribution-console-e2129275-dark.svg",
+    "light": "contribution-console-e2129275-light.svg",
+    "mobileDark": "contribution-console-e2129275-mobile-dark.svg",
+    "mobileLight": "contribution-console-e2129275-mobile-light.svg",
+    "data": "contributions-e2129275.json"
   },
   "regions": [
     {
@@ -30,7 +30,7 @@
       "y": 94,
       "width": 844,
       "height": 108,
-      "minInk": 0.005458221024258761
+      "minInk": 0.005547945205479452
     },
     {
       "label": "stats",
