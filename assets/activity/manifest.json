@@ -1,15 +1,15 @@
 {
   "generator": "contribution-console-v4",
-  "version": "4ad8f9dd",
+  "version": "ef06aa1a",
   "username": "lazizbeksaidov",
   "range": {
     "from": "2025-08-24",
-    "to": "2026-08-24"
+    "to": "2026-08-25"
   },
   "stats": {
-    "total": 44,
-    "activeDays": 10,
-    "currentStreak": 1,
+    "total": 47,
+    "activeDays": 11,
+    "currentStreak": 2,
     "longestStreak": 3,
     "bestDay": {
       "date": "2026-04-17",
@@ -17,11 +17,11 @@
     }
   },
   "assets": {
-    "dark": "contribution-console-4ad8f9dd-dark.svg",
-    "light": "contribution-console-4ad8f9dd-light.svg",
-    "mobileDark": "contribution-console-4ad8f9dd-mobile-dark.svg",
-    "mobileLight": "contribution-console-4ad8f9dd-mobile-light.svg",
-    "data": "contributions-4ad8f9dd.json"
+    "dark": "contribution-console-ef06aa1a-dark.svg",
+    "light": "contribution-console-ef06aa1a-light.svg",
+    "mobileDark": "contribution-console-ef06aa1a-mobile-dark.svg",
+    "mobileLight": "contribution-console-ef06aa1a-mobile-light.svg",
+    "data": "contributions-ef06aa1a.json"
   },
   "regions": [
     {
@@ -30,7 +30,7 @@
       "y": 94,
       "width": 844,
       "height": 108,
-      "minInk": 0.006147540983606557
+      "minInk": 0.006743869209809264
     },
     {
       "label": "stats",

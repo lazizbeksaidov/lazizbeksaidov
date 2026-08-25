@@ -15,11 +15,11 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-4ad8f9dd-mobile-dark.svg">
-    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-4ad8f9dd-mobile-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-4ad8f9dd-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-4ad8f9dd-light.svg">
-    <img src="./assets/activity/contribution-console-4ad8f9dd-dark.svg" alt="Lazizbek Saidov public GitHub activity: 44 contributions across 10 active days" width="100%">
+    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-ef06aa1a-mobile-dark.svg">
+    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-ef06aa1a-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-ef06aa1a-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-ef06aa1a-light.svg">
+    <img src="./assets/activity/contribution-console-ef06aa1a-dark.svg" alt="Lazizbek Saidov public GitHub activity: 47 contributions across 11 active days" width="100%">
   </picture>
 </p>
 
@@ -60,12 +60,12 @@ I am exploring how AI can support high-context workflows without hiding uncertai
 ## Recent Activity
 
 <!-- AUTO:ACTIVITY:START -->
+- Aug 24, 2026: pushed changes to [lazizbeksaidov/kingston-school](https://github.com/lazizbeksaidov/kingston-school).
 - Aug 23, 2026: created a branch in [lazizbeksaidov/kingston-school](https://github.com/lazizbeksaidov/kingston-school).
 - Aug 10, 2026: pushed changes to [lazizbeksaidov/adlix](https://github.com/lazizbeksaidov/adlix).
 - Aug 9, 2026: pushed changes to [lazizbeksaidov/lazizbeksaidov](https://github.com/lazizbeksaidov/lazizbeksaidov).
 - Aug 8, 2026: pushed changes to [lazizbeksaidov/adlix](https://github.com/lazizbeksaidov/adlix).
 - Aug 8, 2026: created a branch in [lazizbeksaidov/adlix](https://github.com/lazizbeksaidov/adlix).
-- Aug 3, 2026: pushed changes to [lazizbeksaidov/moliya-hisobot](https://github.com/lazizbeksaidov/moliya-hisobot).
 <!-- AUTO:ACTIVITY:END -->
 
 ---
