@@ -27,7 +27,7 @@
 <circle cx="24" cy="20" r="5" fill="#DC2626"/><circle cx="42" cy="20" r="5" fill="#B45309"/><circle cx="60" cy="20" r="5" fill="#047857"/>
 <text x="590" y="25" text-anchor="middle" class="mono command">lazizbeksaidov@github ~ % ./contributions --year</text>
 <text x="28" y="65" class="mono section">PUBLIC.BUILD.LOG / LAST 12 MONTHS</text>
-<text x="1152" y="65" text-anchor="end" class="mono axis">Aug 31, 2025 — Aug 30, 2026</text>
+<text x="1152" y="65" text-anchor="end" class="mono axis">Aug 31, 2025 — Aug 31, 2026</text>
 <text x="232" y="82" class="axis">Oct</text>
 <text x="296" y="82" class="axis">Nov</text>
 <text x="376" y="82" class="axis">Dec</text>
@@ -405,6 +405,7 @@
 <rect x="984" y="174" width="12" height="12" rx="3" fill="#E3E9F2" class="contribution-cell" style="animation-delay:1.160s"/>
 <rect x="984" y="190" width="12" height="12" rx="3" fill="#E3E9F2" class="contribution-cell" style="animation-delay:1.164s"/>
 <rect x="1000" y="94" width="12" height="12" rx="3" fill="#E3E9F2" class="contribution-cell" style="animation-delay:1.160s"/>
+<rect x="1000" y="110" width="12" height="12" rx="3" fill="#E3E9F2" class="contribution-cell" style="animation-delay:1.164s"/>
 <g><rect x="28" y="228" width="216" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.58" stroke="#2563EB" stroke-opacity="0.16"/><text x="41" y="246" class="stat-label">CONTRIBUTIONS</text><text x="41" y="266" class="stat-value">47</text></g>
 <g><rect x="254" y="228" width="216" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.58" stroke="#2563EB" stroke-opacity="0.16"/><text x="267" y="246" class="stat-label">ACTIVE DAYS</text><text x="267" y="266" class="stat-value">11</text></g>
 <g><rect x="480" y="228" width="216" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.58" stroke="#2563EB" stroke-opacity="0.16"/><text x="493" y="246" class="stat-label">BEST DAY</text><text x="493" y="266" class="stat-value">15 on Apr 17</text></g>
