@@ -1,15 +1,15 @@
 {
   "generator": "contribution-console-v4",
-  "version": "f2f0124c",
+  "version": "2c69ca21",
   "username": "lazizbeksaidov",
   "range": {
     "from": "2025-09-07",
-    "to": "2026-09-07"
+    "to": "2026-09-08"
   },
   "stats": {
     "total": 49,
     "activeDays": 12,
-    "currentStreak": 1,
+    "currentStreak": 0,
     "longestStreak": 3,
     "bestDay": {
       "date": "2026-04-17",
@@ -17,11 +17,11 @@
     }
   },
   "assets": {
-    "dark": "contribution-console-f2f0124c-dark.svg",
-    "light": "contribution-console-f2f0124c-light.svg",
-    "mobileDark": "contribution-console-f2f0124c-mobile-dark.svg",
-    "mobileLight": "contribution-console-f2f0124c-mobile-light.svg",
-    "data": "contributions-f2f0124c.json"
+    "dark": "contribution-console-2c69ca21-dark.svg",
+    "light": "contribution-console-2c69ca21-light.svg",
+    "mobileDark": "contribution-console-2c69ca21-mobile-dark.svg",
+    "mobileLight": "contribution-console-2c69ca21-mobile-light.svg",
+    "data": "contributions-2c69ca21.json"
   },
   "regions": [
     {
@@ -30,7 +30,7 @@
       "y": 94,
       "width": 844,
       "height": 108,
-      "minInk": 0.007377049180327869
+      "minInk": 0.007356948228882833
     },
     {
       "label": "stats",

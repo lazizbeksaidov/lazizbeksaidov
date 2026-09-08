@@ -2,12 +2,12 @@
   "username": "lazizbeksaidov",
   "range": {
     "from": "2025-09-07",
-    "to": "2026-09-07"
+    "to": "2026-09-08"
   },
   "stats": {
     "total": 49,
     "activeDays": 12,
-    "currentStreak": 1,
+    "currentStreak": 0,
     "longestStreak": 3,
     "bestDay": {
       "date": "2026-04-17",
@@ -1842,6 +1842,11 @@
     },
     {
       "date": "2026-09-07",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-09-08",
       "count": 0,
       "level": 0
     }
