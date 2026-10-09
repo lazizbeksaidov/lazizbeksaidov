@@ -15,11 +15,11 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-0809b0b5-mobile-dark.svg">
-    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-0809b0b5-mobile-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-0809b0b5-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-0809b0b5-light.svg">
-    <img src="./assets/activity/contribution-console-0809b0b5-dark.svg" alt="Lazizbek Saidov public GitHub activity: 49 contributions across 12 active days" width="100%">
+    <source media="(max-width: 1100px) and (prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-7976c8aa-mobile-dark.svg">
+    <source media="(max-width: 1100px)" srcset="./assets/activity/contribution-console-7976c8aa-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/contribution-console-7976c8aa-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/activity/contribution-console-7976c8aa-light.svg">
+    <img src="./assets/activity/contribution-console-7976c8aa-dark.svg" alt="Lazizbek Saidov public GitHub activity: 49 contributions across 12 active days" width="100%">
   </picture>
 </p>
 
@@ -60,7 +60,7 @@ I am exploring how AI can support high-context workflows without hiding uncertai
 ## Recent Activity
 
 <!-- AUTO:ACTIVITY:START -->
-- Sep 6, 2026: pushed changes to [lazizbeksaidov/kingston-school](https://github.com/lazizbeksaidov/kingston-school).
+_No recent public activity was found._
 <!-- AUTO:ACTIVITY:END -->
 
 ---
